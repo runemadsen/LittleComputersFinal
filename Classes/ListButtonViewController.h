@@ -2,7 +2,10 @@
 #import "CustomButton.h"
 #import "TemplateViewController.h"
 #import "TTButtonModel.h"
-
+#import "Event.h"
+//#import "AppController.h"
+@class AppController;
+@class StatesModel;
 
 //@class CustomButton;
 

@@ -20,10 +20,10 @@
 	
 		self.clickAllowed = YES;
 		
-		printf("Center X: %f \n", self.center.x);
+		/*printf("Center X: %f \n", self.center.x);
 		printf("Center Y: %f \n", self.center.y);
 		printf("Frame X: %f \n", self.frame.origin.x);
-		printf("Frame Y: %f \n", self.frame.origin.y);
+		printf("Frame Y: %f \n", self.frame.origin.y);*/
 	}
 	
 	return self;
@@ -44,10 +44,10 @@
 		// update the model
 		self.model.location = location;
 		
-		printf("MOVE Center X: %f \n", self.center.x);
+		/*printf("MOVE Center X: %f \n", self.center.x);
 		printf("MOVE Center Y: %f \n", self.center.y);
 		printf("Frame X: %f \n", self.frame.origin.x);
-		printf("Frame Y: %f \n", self.frame.origin.y);
+		printf("Frame Y: %f \n", self.frame.origin.y);*/
 	}
 }
 

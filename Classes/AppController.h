@@ -4,10 +4,9 @@
 #import "Picker.h"
 #import "TCPServer.h"
 #import "Event.h"
+//@class TemplatesViewController;
 #import "TemplatesViewController.h"
 #import "ButtonStylesheet.h"
-
-@class SetupViewController;
 
 //CLASS INTERFACES:
 
@@ -23,7 +22,6 @@
 	BOOL _outReady;
 	
 	TemplatesViewController	* templatesViewController;
-	SetupViewController * setupViewController;
 	UINavigationController * navigationController;
 	PickerViewController * pickerViewController;
 }

@@ -1,4 +1,5 @@
 #import "Three20/Three20.h"
+#import "Event.h"
 
 @interface StatesModel: NSObject <TTModel> 
 {
