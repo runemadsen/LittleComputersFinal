@@ -14,12 +14,16 @@
 		
 		[self setTitle:self.model.name forState:UIControlStateNormal];
 		[self setStylesWithSelector:selector];
+		[self sizeToFit];
+		[self setEnabled:YES];
 		self.center = self.model.location;
 	
 		self.clickAllowed = YES;
 		
 		printf("Center X: %f \n", self.center.x);
 		printf("Center Y: %f \n", self.center.y);
+		printf("Frame X: %f \n", self.frame.origin.x);
+		printf("Frame Y: %f \n", self.frame.origin.y);
 	}
 	
 	return self;
@@ -35,8 +39,6 @@
 	{
 		UITouch * touch = [touches anyObject];
 		CGPoint location = [touch locationInView:self.superview];
-		//location.x -= (self.bounds.size.width / 2);
-		//location.y -= (self.bounds.size.height / 2);
 		self.center = location;
 		
 		// update the model
@@ -44,6 +46,8 @@
 		
 		printf("MOVE Center X: %f \n", self.center.x);
 		printf("MOVE Center Y: %f \n", self.center.y);
+		printf("Frame X: %f \n", self.frame.origin.x);
+		printf("Frame Y: %f \n", self.frame.origin.y);
 	}
 }
 

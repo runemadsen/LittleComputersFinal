@@ -7,7 +7,7 @@
 //
 
 #import "Final_TemplatesAppDelegate.h"
-#import "RootViewController.h"
+#import "TemplatesViewController.h"
 #import "ButtonStylesheet.h"
 
 @implementation Final_TemplatesAppDelegate
@@ -23,7 +23,7 @@
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
 	// style the navigationbar
-	navigationController = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] initWithStyle:UITableViewStylePlain]];
+	navigationController = [[UINavigationController alloc] initWithRootViewController:[[TemplatesViewController alloc] initWithStyle:UITableViewStylePlain]];
 	navigationController.navigationBar.tintColor = [UIColor colorWithWhite:0.4 alpha:1.0];
 	
 	[TTStyleSheet setGlobalStyleSheet:[[[ButtonStyleSheet alloc] init] autorelease]];

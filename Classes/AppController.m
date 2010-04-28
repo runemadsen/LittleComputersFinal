@@ -14,7 +14,7 @@
 //CLASS IMPLEMENTATIONS:
 
 @implementation AppController
-@synthesize tapViewController;
+@synthesize templatesViewController;
 
 - (void) _showAlert:(NSString*)title
 {
@@ -34,22 +34,16 @@
 	//Create a picker view
 	pickerViewController = [[PickerViewController alloc] init];
 	navigationController = [[UINavigationController alloc] initWithRootViewController:pickerViewController];
-	[navigationController setNavigationBarHidden:YES animated:NO];
+	navigationController.navigationBar.tintColor = [UIColor colorWithWhite:0.4 alpha:1.0];
 	
-	//Create the tap views and add them to the view controller's view
-	tapViewController = [[TapViewController alloc] init];
-	[tapViewController setAppc:self];
-
-	//Create the setup view
-	//setupViewController = [[SetupViewController alloc] init];
+	[TTStyleSheet setGlobalStyleSheet:[[[ButtonStyleSheet alloc] init] autorelease]];
+	
+	// Create template screen
+	templatesViewController = [[TemplatesViewController alloc] init];
+	//[tapViewController setAppc:self];
 
 	[_window addSubview:navigationController.view];
-	
-	//Show the window
-	[application setStatusBarHidden:NO animated:YES];
 	[_window makeKeyAndVisible];
-	
-	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / kAccelerometerFrequency)];
 	
 	//Create and advertise a new game and discover other availble games
 	[self setup];
@@ -57,17 +51,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application 
 {
-	[[NSUserDefaults standardUserDefaults] synchronize];
+	//[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	NSNotificationCenter * dc = [NSNotificationCenter defaultCenter];
+	[dc postNotification:[NSNotification notificationWithName:@"ApplicationTerminate" object:self]];
 }
 
 - (void) dealloc
 {
-	[[UIAccelerometer sharedAccelerometer] setDelegate:nil];
+	//[[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 	
 	[self closeStreams];
 	[_server release];
 	
-	[tapViewController release];
+	[templatesViewController release];
 	[setupViewController release];
 	[navigationController release];
 	[pickerViewController release];
@@ -85,7 +82,8 @@
 	_server = [TCPServer new];
 	[_server setDelegate:self];
 	NSError* error;
-	if(_server == nil || ![_server start:&error]) {
+	if(_server == nil || ![_server start:&error]) 
+	{
 		NSLog(@"Failed creating server: %@", error);
 		[self _showAlert:@"Failed creating server"];
 		return;
@@ -102,10 +100,7 @@
 
 - (void) showTapView 
 {	
-	//[tapViewController resetAllStates:self];
-	[navigationController pushViewController:tapViewController animated:YES];
-	//[tapViewController prepareTapView];
-	[[UIAccelerometer sharedAccelerometer] setDelegate:tapViewController];
+	[navigationController pushViewController:templatesViewController animated:YES];
 }
 
 // Make sure to let the user know what name is being used for Bonjour advertisement.
@@ -203,7 +198,8 @@
 			else
 				_outReady = YES;
 			
-			if (_inReady && _outReady) {
+			if (_inReady && _outReady) 
+			{
 				[self showTapView];
 				
 				alertView = [[UIAlertView alloc] initWithTitle:@"Connected!" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Continue", nil];

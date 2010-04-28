@@ -7,6 +7,7 @@
 @synthesize shortcut;
 @synthesize shortcuts;
 @synthesize location;
+@synthesize frame;
 
 /* Archiving
  ______________________________________________________________ */

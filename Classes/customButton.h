@@ -7,11 +7,13 @@
 	NSString * shortcut;
 	NSMutableArray * shortcuts;
 	CGPoint location;
+	CGPoint frame;
 }
 
 @property(nonatomic,copy) NSString * name;
 @property(nonatomic,copy) NSString * shortcut;
 @property(assign) CGPoint location;
+@property(assign) CGPoint frame;
 @property(nonatomic,retain) NSMutableArray * shortcuts;
 
 @end

@@ -4,8 +4,9 @@
 #import "Picker.h"
 #import "TCPServer.h"
 #import "Event.h"
+#import "TemplatesViewController.h"
+#import "ButtonStylesheet.h"
 
-@class TapViewController;
 @class SetupViewController;
 
 //CLASS INTERFACES:
@@ -14,11 +15,14 @@
 {
 	UIWindow * _window;
 	TCPServer * _server;
+	
 	NSInputStream * _inStream;
 	NSOutputStream * _outStream;
+	
 	BOOL _inReady;
 	BOOL _outReady;
-	TapViewController	* tapViewController;
+	
+	TemplatesViewController	* templatesViewController;
 	SetupViewController * setupViewController;
 	UINavigationController * navigationController;
 	PickerViewController * pickerViewController;
@@ -29,6 +33,6 @@
 - (void) setup;
 - (void) closeStreams;
 
-@property (readonly) TapViewController *tapViewController;
+@property (readonly) TemplatesViewController * templatesViewController;
 
 @end

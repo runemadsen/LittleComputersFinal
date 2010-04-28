@@ -20,8 +20,6 @@
 	{
 		UIButton * btn = (UIButton *) [[TTButtonModel alloc] initWithModel: [buttons objectAtIndex:(NSUInteger) i] style:@"blackForwardButton:"];
 		[btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-		[btn sizeToFit];
-		[btn setEnabled:YES];
 		[self.view addSubview:btn];
 	}
 }
