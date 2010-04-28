@@ -62,12 +62,7 @@
 
 -(IBAction)editButton:(id)sender
 {
-	for(int i = 0; i < [[self.listView.view subviews] count]; i++)
-	{
-		BOOL en= [[[self.listView.view subviews] objectAtIndex:i] button].enabled;
-		
-		[[[[self.listView.view subviews] objectAtIndex:i] button] setEnabled:!en];
-	}
+	[self.listView toggleButtons];
 	
 	//[self.listView viewDidLoad];
 }

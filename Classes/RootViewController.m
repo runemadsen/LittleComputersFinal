@@ -78,6 +78,11 @@ ______________________________________________________________ */
 	{
 		NSLog(@"Oops! something went wrong trying to save that person.");
 	}
+	else 
+	{
+		NSLog(@"Saved templates and buttons");
+	}
+
 }
 
 /* Table View Methods

@@ -5,23 +5,49 @@
 
 -(void)viewDidLoad
 {	
-	
+
 }
 
 -(void)refreshButtons:(NSMutableArray *)buttons
-{	
+{		
 	//this is a bit stupid, but we do it
 	for (UIView * view in self.view.subviews) 
 	{
 		[view removeFromSuperview];
 	}
 	
-	
 	for(int i = 0; i < [buttons count]; i++) 
 	{
-		CGRect rect = CGRectMake(20, 20, 150, 35);
-		CustomButtonView * btn = [[CustomButtonView alloc] initWithFrame:rect model:[buttons objectAtIndex:(NSUInteger) i]];
+		UIButton * btn = (UIButton *) [[TTButtonModel alloc] initWithModel: [buttons objectAtIndex:(NSUInteger) i] style:@"blackForwardButton:"];
+		[btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+		[btn sizeToFit];
+		[btn setEnabled:YES];
 		[self.view addSubview:btn];
+	}
+}
+
+-(void)toggleButtons
+{
+	for(int i = 0; i < [[self.view subviews] count]; i++)
+	{
+		TTButtonModel * btn = [[self.view subviews] objectAtIndex:i];
+		
+		[[[self.view subviews] objectAtIndex:i] setClickAllowed:!btn.clickAllowed];
+	}
+}
+
+-(void)buttonClick:(id)sender
+{
+	TTButtonModel * btn = (TTButtonModel *) sender;
+	
+	if(btn.clickAllowed)
+	{
+		NSLog(@">>>> Button pressed \n");
+		
+		for(int i = 0; i < [btn.model.shortcuts count]; i++) 
+		{
+			NSLog(@"Shortcut: %@ \n", [btn.model.shortcuts objectAtIndex:i]);
+		}
 	}
 }
 

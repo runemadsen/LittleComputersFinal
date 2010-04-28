@@ -7,8 +7,6 @@
 
 - (void) viewDidLoad
 {
-	NSLog(@"View did load");
-	
 	firstTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, -10, 280, 42)];
 	firstTextField.background = [UIImage imageNamed:@"textfield.png"];
 	firstTextField.autocorrectionType = UITextAutocorrectionTypeNo;

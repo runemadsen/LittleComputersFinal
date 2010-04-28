@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomButton.h"
 #import "TemplateViewController.h"
+#import "TTButtonModel.h"
 
 
 //@class CustomButton;
@@ -11,5 +12,6 @@
 }
 
 -(void)refreshButtons:(NSMutableArray *)buttons;
+-(void)toggleButtons;
 
 @end
