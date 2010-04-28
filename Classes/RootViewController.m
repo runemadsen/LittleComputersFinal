@@ -10,6 +10,7 @@ ______________________________________________________________ */
 
 - (void)viewDidLoad 
 {
+	NSLog(@"View loaded");
     [super viewDidLoad];
 	
 	NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
