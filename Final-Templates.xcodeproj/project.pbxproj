@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* Final_TemplatesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Final_TemplatesAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		A516E9FF116E640D0024FFA5 /* AddTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516E9FE116E640D0024FFA5 /* AddTemplateViewController.m */; };
+		A516EA01116E644E0024FFA5 /* AddTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */; };
+		A54CD8D71187AAA60083822E /* NavigationBarExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CD8D61187AAA60083822E /* NavigationBarExtend.m */; };
+		A54CD8F01187AB650083822E /* topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD8EF1187AB650083822E /* topbar.png */; };
+		A54CD9C91187BC810083822E /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD9C81187BC810083822E /* textfield.png */; };
+		A54CD9EB1187C0470083822E /* savebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD9EA1187C0470083822E /* savebutton.png */; };
+		A54CDA631187CBE90083822E /* UIToolbarExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CDA621187CBE90083822E /* UIToolbarExtend.m */; };
+		A54CDAF41187D3650083822E /* ButtonStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CDAF31187D3650083822E /* ButtonStylesheet.m */; };
+		A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A55B3F43116E3E1700C28475 /* TemplatesLoader.m */; };
+		A57FD303116D4CD90078207A /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD302116D4CD90078207A /* Template.m */; };
+		A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD30D116D506B0078207A /* TemplateViewController.m */; };
+		A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D18347116E534A00E2122C /* LCFileHelpers.m */; };
+		A5E2E89A1187819400E3EDEE /* StatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E8971187819400E3EDEE /* StatesModel.m */; };
+		A5E2E89B1187819400E3EDEE /* PickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E8991187819400E3EDEE /* PickerDataSource.m */; };
+		A5E2E89E118781AC00E3EDEE /* PickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E89D118781AC00E3EDEE /* PickerController.m */; };
+		A5E2E93A1187850C00E3EDEE /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E2E9371187850300E3EDEE /* libThree20.a */; };
+		A5E2E9401187854F00E3EDEE /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5E2E93F1187854F00E3EDEE /* Three20.bundle */; };
+		A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FEAABE11865BFB003C7521 /* QuartzCore.framework */; };
+		A5FEAAE411865D39003C7521 /* editView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE211865D39003C7521 /* editView.xib */; };
+		A5FEAAE511865D39003C7521 /* listView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE311865D39003C7521 /* listView.xib */; };
+		A5FEAAEF11865D89003C7521 /* CustomButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAE911865D89003C7521 /* CustomButtonView.m */; };
+		A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */; };
+		A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAED11865D89003C7521 /* EditButtonViewController.m */; };
+		A5FEAC681186842C003C7521 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAC671186842C003C7521 /* CustomButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5E2E9361187850300E3EDEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		A5E2E9381187850300E3EDEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		A5E2E93C1187853700E3EDEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* Final_TemplatesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Final_TemplatesAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* Final_TemplatesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Final_TemplatesAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Final-Templates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final-Templates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* Final_Templates_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Final_Templates_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Final_Templates-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Final_Templates-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A516E9FD116E640D0024FFA5 /* AddTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTemplateViewController.h; sourceTree = "<group>"; };
+		A516E9FE116E640D0024FFA5 /* AddTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTemplateViewController.m; sourceTree = "<group>"; };
+		A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTemplateViewController.xib; sourceTree = "<group>"; };
+		A54CD8D51187AAA60083822E /* NavigationBarExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarExtend.h; sourceTree = "<group>"; };
+		A54CD8D61187AAA60083822E /* NavigationBarExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarExtend.m; sourceTree = "<group>"; };
+		A54CD8EF1187AB650083822E /* topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topbar.png; path = images/topbar.png; sourceTree = "<group>"; };
+		A54CD9C81187BC810083822E /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textfield.png; path = images/textfield.png; sourceTree = "<group>"; };
+		A54CD9EA1187C0470083822E /* savebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = savebutton.png; path = images/savebutton.png; sourceTree = "<group>"; };
+		A54CDA611187CBE90083822E /* UIToolbarExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolbarExtend.h; sourceTree = "<group>"; };
+		A54CDA621187CBE90083822E /* UIToolbarExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolbarExtend.m; sourceTree = "<group>"; };
+		A54CDAF21187D3650083822E /* ButtonStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonStylesheet.h; sourceTree = "<group>"; };
+		A54CDAF31187D3650083822E /* ButtonStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonStylesheet.m; sourceTree = "<group>"; };
+		A55B3F42116E3E1700C28475 /* TemplatesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatesLoader.h; sourceTree = "<group>"; };
+		A55B3F43116E3E1700C28475 /* TemplatesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesLoader.m; sourceTree = "<group>"; };
+		A57FD301116D4CD90078207A /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
+		A57FD302116D4CD90078207A /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
+		A57FD30C116D506B0078207A /* TemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateViewController.h; sourceTree = "<group>"; };
+		A57FD30D116D506B0078207A /* TemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateViewController.m; sourceTree = "<group>"; };
+		A5D18346116E534A00E2122C /* LCFileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFileHelpers.h; sourceTree = "<group>"; };
+		A5D18347116E534A00E2122C /* LCFileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFileHelpers.m; sourceTree = "<group>"; };
+		A5E2E8961187819400E3EDEE /* StatesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesModel.h; sourceTree = "<group>"; };
+		A5E2E8971187819400E3EDEE /* StatesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesModel.m; sourceTree = "<group>"; };
+		A5E2E8981187819400E3EDEE /* PickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerDataSource.h; sourceTree = "<group>"; };
+		A5E2E8991187819400E3EDEE /* PickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerDataSource.m; sourceTree = "<group>"; };
+		A5E2E89C118781AC00E3EDEE /* PickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerController.h; sourceTree = "<group>"; };
+		A5E2E89D118781AC00E3EDEE /* PickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerController.m; sourceTree = "<group>"; };
+		A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = three20/src/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A5E2E93F1187854F00E3EDEE /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+		A5FEAABE11865BFB003C7521 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5FEAAE211865D39003C7521 /* editView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editView.xib; sourceTree = "<group>"; };
+		A5FEAAE311865D39003C7521 /* listView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listView.xib; sourceTree = "<group>"; };
+		A5FEAAE811865D89003C7521 /* CustomButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButtonView.h; sourceTree = "<group>"; };
+		A5FEAAE911865D89003C7521 /* CustomButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButtonView.m; sourceTree = "<group>"; };
+		A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListButtonViewController.h; sourceTree = "<group>"; };
+		A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListButtonViewController.m; sourceTree = "<group>"; };
+		A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditButtonViewController.h; sourceTree = "<group>"; };
+		A5FEAAED11865D89003C7521 /* EditButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditButtonViewController.m; sourceTree = "<group>"; };
+		A5FEAC661186842C003C7521 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		A5FEAC671186842C003C7521 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */,
+				A5E2E93A1187850C00E3EDEE /* libThree20.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD8791187A5780083822E /* categories */,
+				A5FEAC56118683AD003C7521 /* helpers */,
+				A5FEAC551186839F003C7521 /* controllers */,
+				A5FEAC5411868396003C7521 /* views */,
+				A5FEAC5311868392003C7521 /* models */,
+				1D3623240D0F684500981E51 /* Final_TemplatesAppDelegate.h */,
+				1D3623250D0F684500981E51 /* Final_TemplatesAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Final-Templates.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD8EA1187AAC60083822E /* images */,
+				A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* Final_Templates_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5E2E93F1187854F00E3EDEE /* Three20.bundle */,
+				A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */,
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Final_Templates-Info.plist */,
+				A5FEAAE211865D39003C7521 /* editView.xib */,
+				A5FEAAE311865D39003C7521 /* listView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5FEAABE11865BFB003C7521 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A54CD8791187A5780083822E /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD8D51187AAA60083822E /* NavigationBarExtend.h */,
+				A54CD8D61187AAA60083822E /* NavigationBarExtend.m */,
+				A54CDA611187CBE90083822E /* UIToolbarExtend.h */,
+				A54CDA621187CBE90083822E /* UIToolbarExtend.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+		A54CD8EA1187AAC60083822E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD9EA1187C0470083822E /* savebutton.png */,
+				A54CD9C81187BC810083822E /* textfield.png */,
+				A54CD8EF1187AB650083822E /* topbar.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		A5E2E9321187850300E3EDEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5E2E9371187850300E3EDEE /* libThree20.a */,
+				A5E2E9391187850300E3EDEE /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5FEAC5311868392003C7521 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A5E2E8961187819400E3EDEE /* StatesModel.h */,
+				A5E2E8971187819400E3EDEE /* StatesModel.m */,
+				A5E2E8981187819400E3EDEE /* PickerDataSource.h */,
+				A5E2E8991187819400E3EDEE /* PickerDataSource.m */,
+				A55B3F42116E3E1700C28475 /* TemplatesLoader.h */,
+				A55B3F43116E3E1700C28475 /* TemplatesLoader.m */,
+				A57FD301116D4CD90078207A /* Template.h */,
+				A57FD302116D4CD90078207A /* Template.m */,
+				A5FEAC661186842C003C7521 /* CustomButton.h */,
+				A5FEAC671186842C003C7521 /* CustomButton.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		A5FEAC5411868396003C7521 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A5FEAAE811865D89003C7521 /* CustomButtonView.h */,
+				A5FEAAE911865D89003C7521 /* CustomButtonView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		A5FEAC551186839F003C7521 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				A57FD30C116D506B0078207A /* TemplateViewController.h */,
+				A57FD30D116D506B0078207A /* TemplateViewController.m */,
+				A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */,
+				A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */,
+				A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */,
+				A5FEAAED11865D89003C7521 /* EditButtonViewController.m */,
+				A516E9FD116E640D0024FFA5 /* AddTemplateViewController.h */,
+				A516E9FE116E640D0024FFA5 /* AddTemplateViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		A5FEAC56118683AD003C7521 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D18346116E534A00E2122C /* LCFileHelpers.h */,
+				A5D18347116E534A00E2122C /* LCFileHelpers.m */,
+				A5E2E89C118781AC00E3EDEE /* PickerController.h */,
+				A5E2E89D118781AC00E3EDEE /* PickerController.m */,
+				A54CDAF21187D3650083822E /* ButtonStylesheet.h */,
+				A54CDAF31187D3650083822E /* ButtonStylesheet.m */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Final-Templates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Final-Templates" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5E2E93D1187853700E3EDEE /* PBXTargetDependency */,
+			);
+			name = "Final-Templates";
+			productName = "Final-Templates";
+			productReference = 1D6058910D05DD3D006BFB54 /* Final-Templates.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Final-Templates" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A5E2E9321187850300E3EDEE /* Products */;
+					ProjectRef = A5E2E92C1187850300E3EDEE /* Three20.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Final-Templates */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A5E2E9371187850300E3EDEE /* libThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20.a;
+			remoteRef = A5E2E9361187850300E3EDEE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5E2E9391187850300E3EDEE /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = A5E2E9381187850300E3EDEE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				A516EA01116E644E0024FFA5 /* AddTemplateViewController.xib in Resources */,
+				A5FEAAE411865D39003C7521 /* editView.xib in Resources */,
+				A5FEAAE511865D39003C7521 /* listView.xib in Resources */,
+				A5E2E9401187854F00E3EDEE /* Three20.bundle in Resources */,
+				A54CD8F01187AB650083822E /* topbar.png in Resources */,
+				A54CD9C91187BC810083822E /* textfield.png in Resources */,
+				A54CD9EB1187C0470083822E /* savebutton.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* Final_TemplatesAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				A57FD303116D4CD90078207A /* Template.m in Sources */,
+				A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */,
+				A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */,
+				A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */,
+				A516E9FF116E640D0024FFA5 /* AddTemplateViewController.m in Sources */,
+				A5FEAAEF11865D89003C7521 /* CustomButtonView.m in Sources */,
+				A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */,
+				A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */,
+				A5FEAC681186842C003C7521 /* CustomButton.m in Sources */,
+				A5E2E89A1187819400E3EDEE /* StatesModel.m in Sources */,
+				A5E2E89B1187819400E3EDEE /* PickerDataSource.m in Sources */,
+				A5E2E89E118781AC00E3EDEE /* PickerController.m in Sources */,
+				A54CD8D71187AAA60083822E /* NavigationBarExtend.m in Sources */,
+				A54CDA631187CBE90083822E /* UIToolbarExtend.m in Sources */,
+				A54CDAF41187D3650083822E /* ButtonStylesheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5E2E93D1187853700E3EDEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20;
+			targetProxy = A5E2E93C1187853700E3EDEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Final_Templates_Prefix.pch;
+				INFOPLIST_FILE = "Final_Templates-Info.plist";
+				PRODUCT_NAME = "Final-Templates";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Final_Templates_Prefix.pch;
+				INFOPLIST_FILE = "Final_Templates-Info.plist";
+				PRODUCT_NAME = "Final-Templates";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = three20/src;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Final-Templates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Final-Templates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
