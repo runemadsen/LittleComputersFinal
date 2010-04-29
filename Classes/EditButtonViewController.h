@@ -1,14 +1,14 @@
-#import "Three20/Three20.h"
 #import <UIKit/UIKit.h>
-#import "PickerDataSource.h"
-
+#import "Three20/Three20.h"
+#import "ShortcutViewController.h"
 
 @interface EditButtonViewController : UIViewController <UITextFieldDelegate> 
 {
 	UITextField * firstTextField;
-	TTPickerTextField * shortcutField;
+	ShortcutViewController * shortcutView;
 	
 }
 @property (nonatomic, retain) UITextField * firstTextField;
-@property (nonatomic, retain) TTPickerTextField * shortcutField;
+@property (nonatomic, retain) ShortcutViewController * shortcutView;
+
 @end

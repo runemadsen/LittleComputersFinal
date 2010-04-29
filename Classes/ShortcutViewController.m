@@ -10,43 +10,50 @@
 
 
 @implementation ShortcutViewController
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+@synthesize shortcutField;
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidLoad
+{
+	shortcutField = [[[TTPickerTextField alloc] initWithFrame:CGRectMake(20, 40, 280, 42)] autorelease];
+    shortcutField.dataSource = [[[PickerDataSource alloc] init] autorelease];;
+    shortcutField.autocorrectionType = UITextAutocorrectionTypeNo;
+    shortcutField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    shortcutField.rightViewMode = UITextFieldViewModeAlways;
+    shortcutField.delegate = self;
+    shortcutField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    //[shortcutField sizeToFit];
+	shortcutField.font = [UIFont systemFontOfSize:14];
+	shortcutField.textColor = [UIColor colorWithWhite:0.56 alpha:1];
+	//shortcutField.placeholder = @"Shortcut";
+	shortcutField.background = [UIImage imageNamed:@"textfield.png"];
+	
+	UIScrollView * scrollView = [[[UIScrollView alloc] initWithFrame:TTNavigationFrame()] autorelease];
+    //scrollView.backgroundColor = TTSTYLEVAR(backgroundColor);
+    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    scrollView.canCancelContentTouches = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:scrollView];
+    
+    //[scrollView addSubview:shortcutField];
+	[self.view addSubview:shortcutField];
+    
+    CGFloat y = 0;
+    
+    for (UIView *view in scrollView.subviews) 
+	{
+        view.frame = CGRectMake(0, y, self.view.width, view.height);
+        y += view.height;
+    }
+    
+    scrollView.contentSize = CGSizeMake(scrollView.width, y);
 }
 
 - (void)viewDidUnload {

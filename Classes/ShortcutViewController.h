@@ -1,16 +1,12 @@
-//
-//  ShortcutViewController.h
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/29/10.
-//  Copyright 2010 New York University. All rights reserved.
-//
-
+#import "PickerDataSource.h"
+#import "Three20/Three20.h"
 #import <UIKit/UIKit.h>
 
-
-@interface ShortcutViewController : UIViewController {
-
+@interface ShortcutViewController : UIViewController <UITextFieldDelegate> 
+{
+	TTPickerTextField * shortcutField;
 }
+
+@property (nonatomic, retain) TTPickerTextField * shortcutField;
 
 @end
