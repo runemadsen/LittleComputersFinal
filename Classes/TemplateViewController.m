@@ -56,8 +56,10 @@
 
 -(IBAction)newButton:(id)sender
 {
-	[self switchViews];
-	[self displayEditToolbar];
+	[self.navigationController pushViewController:self.editView animated:YES];
+	
+	//[self switchViews];
+	//[self displayEditToolbar];
 }
 
 -(IBAction)editButton:(id)sender

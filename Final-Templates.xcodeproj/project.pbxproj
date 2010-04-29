@@ -32,6 +32,7 @@
 		A5D6DC821188E0CC001274DF /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DC791188E0CC001274DF /* TCPServer.m */; };
 		A5D6DC831188E0CC001274DF /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DC7B1188E0CC001274DF /* BrowserViewController.m */; };
 		A5D6DC841188E0CC001274DF /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D6DC7D1188E0CC001274DF /* AppController.m */; };
+		A5DF4E67118A3935002ABF74 /* ShortcutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DF4E66118A3935002ABF74 /* ShortcutViewController.m */; };
 		A5E2E89A1187819400E3EDEE /* StatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E8971187819400E3EDEE /* StatesModel.m */; };
 		A5E2E89B1187819400E3EDEE /* PickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E8991187819400E3EDEE /* PickerDataSource.m */; };
 		A5E2E89E118781AC00E3EDEE /* PickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E2E89D118781AC00E3EDEE /* PickerController.m */; };
@@ -119,6 +120,8 @@
 		A5D6DC7D1188E0CC001274DF /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		A5D6DC7E1188E0CC001274DF /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		A5D6DC9B1188E12E001274DF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A5DF4E65118A3935002ABF74 /* ShortcutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutViewController.h; sourceTree = "<group>"; };
+		A5DF4E66118A3935002ABF74 /* ShortcutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutViewController.m; sourceTree = "<group>"; };
 		A5E2E8961187819400E3EDEE /* StatesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesModel.h; sourceTree = "<group>"; };
 		A5E2E8971187819400E3EDEE /* StatesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesModel.m; sourceTree = "<group>"; };
 		A5E2E8981187819400E3EDEE /* PickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerDataSource.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 		A5FEAC551186839F003C7521 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A5DF4E65118A3935002ABF74 /* ShortcutViewController.h */,
+				A5DF4E66118A3935002ABF74 /* ShortcutViewController.m */,
 				28C286DF0D94DF7D0034E888 /* TemplatesViewController.h */,
 				28C286E00D94DF7D0034E888 /* TemplatesViewController.m */,
 				A57FD30C116D506B0078207A /* TemplateViewController.h */,
@@ -438,6 +443,7 @@
 				A5D6DC821188E0CC001274DF /* TCPServer.m in Sources */,
 				A5D6DC831188E0CC001274DF /* BrowserViewController.m in Sources */,
 				A5D6DC841188E0CC001274DF /* AppController.m in Sources */,
+				A5DF4E67118A3935002ABF74 /* ShortcutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
