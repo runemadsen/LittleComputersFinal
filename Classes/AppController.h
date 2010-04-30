@@ -4,7 +4,6 @@
 #import "Picker.h"
 #import "TCPServer.h"
 #import "Event.h"
-//@class TemplatesViewController;
 #import "TemplatesViewController.h"
 #import "ButtonStylesheet.h"
 

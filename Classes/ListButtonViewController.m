@@ -54,7 +54,7 @@
 			
 			if([str length] == 1)
 			{
-				[appc send:EVENT_ASCII with:str time:timestamp];
+				[appc send:EVENT_ASCII with:[str characterAtIndex:0] time:timestamp];
 			}
 			else if([str isEqualToString:@"Shift"])	
 			{
@@ -113,17 +113,6 @@
 			}
 			
 			[str release];
-
-			
-			// Send keyboard key
-			//[appc send:EVENT_ASCII with:[btn.model.shortcuts objectAtIndex:i] time:timestamp];
-			
-			// Send mouse click
-			//[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(2, 1) time:timestamp];
-			
-			// Send one delete
-			//[appc send:EVENT_KEY_DOWN with:kKeycodeBackSpace time:timestamp];
-			//[appc send:EVENT_KEY_UP with:kKeycodeBackSpace time:timestamp];
 			
 			NSLog(@"Send message: %@ \n", [btn.model.shortcuts objectAtIndex:i]);
 		}

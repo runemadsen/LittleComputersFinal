@@ -27,14 +27,10 @@
 @property (nonatomic, retain) UIToolbar *toolbar;
 
 - (id) initWithTemplate:(Template *)newModel;
--(void)switchViews;
+
 -(void)newButton:(id)sender;
 -(void)editButton:(id)sender;
 -(void)trushButton:(id)sender;
--(void)cancelButton:(id)sender;
--(void)doneButton:(id)sender;
--(void)displayListToolbar;
--(void)displayEditToolbar;
 
 @end
 

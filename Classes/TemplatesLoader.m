@@ -46,6 +46,9 @@
 
 - (void) encodeWithCoder:(NSCoder*)coder
 {
+	// to prevent any saving
+	self.templates = [[NSMutableArray alloc] init];
+	
 	[coder encodeObject:self.templates forKey:@"templates"];
 }
 

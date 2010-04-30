@@ -20,6 +20,8 @@
 
 -(void)viewDidLoad
 {	
+	[self.view setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+	
 	NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
 	[dc addObserver:self selector:@selector(saveNewButton:) name:@"SaveNewButton" object:NULL];
 	
@@ -37,39 +39,17 @@
 	
 	[self displayListToolbar];
 	
-	[self.view setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
-	
 	enable = YES;
-}
-
--(void)switchViews
-{
-	if (self.editView.view.superview == nil) 
-	{
-		[listView.view removeFromSuperview];
-		[self.view insertSubview:editView.view atIndex:0];
-	} 
-	else 
-	{
-		[editView.view removeFromSuperview];
-		[self.view insertSubview:listView.view atIndex:0];
-		[self.listView viewDidLoad];
-	}
 }
 
 -(void)newButton:(id)sender
 {
 	[self.navigationController pushViewController:self.editView animated:YES];
-	
-	//[self switchViews];
-	//[self displayEditToolbar];
 }
 
 -(void)editButton:(id)sender
 {
 	[self.listView toggleButtons];
-	
-	//[self.listView viewDidLoad];
 }
 
 -(void)trushButton:(id)sender
@@ -77,17 +57,8 @@
 	
 }
 
--(void)cancelButton:(id)sender
-{
-	[self switchViews];
-	[self displayListToolbar];
-}
-
 -(void)saveNewButton:(id)sender
 {
-	printf("Done called");
-	// new model, and refresh buttons on listview
-	
 	CustomButton * buttonModel = [[CustomButton alloc] init];
 	buttonModel.name = [[editView firstTextField] text];
 	//buttonModel.shortcut = [[editView secondTextField] text];
@@ -110,9 +81,6 @@
 	
 	// update views in list
 	[self.listView refreshButtons:self.model.buttons];
-	
-	[self switchViews];
-	[self displayListToolbar];
 	
 	[buttonModel release];
 }
@@ -156,35 +124,6 @@
 	[newButton release];
 	[editButton release];
 	[deleteButton release];	
-}
-
--(void)displayEditToolbar
-{
-	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-																				  target:self
-																				  action:@selector(cancelButton:)];
-	
-	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-																				target:self
-																				action:@selector(doneButton:)];
-	
-	NSArray *items = [NSArray arrayWithObjects: cancelButton, doneButton, nil];	
-	
-	UIToolbar * tools =[UIToolbarExtend new];
-
-	tools.frame = CGRectMake(0, 0, 133, 44.01);
-	[tools setItems:items animated:NO];
-	
-	//[tools setBarStyle:UIBarStyleBlackTranslucent];
-	[tools setTranslucent:YES];
-	
-	// these should change the button colors but they dont
-	tools.tintColor = [UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1];
-	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
-	
-	[cancelButton release];
-	[doneButton release];
 }
 
 - (void)didReceiveMemoryWarning 
