@@ -103,7 +103,6 @@
 			}
 			else if([str isEqualToString:@"Mouse Middle"])	
 			{
-				NSLog(@"Sending \n");
 				[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(2, 1) time:timestamp];
 				[appc send:EVENT_MOUSE_UP with:MouseEventValue(2, 1) time:timestamp];
 			}

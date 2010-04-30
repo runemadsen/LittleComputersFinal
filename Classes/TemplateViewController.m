@@ -20,6 +20,9 @@
 
 -(void)viewDidLoad
 {	
+	NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
+	[dc addObserver:self selector:@selector(saveNewButton:) name:@"SaveNewButton" object:NULL];
+	
 	ListButtonViewController * listB = [[ListButtonViewController alloc] init];
 	self.listView = listB;
 	[self.view insertSubview:listB.view atIndex:0];
@@ -54,7 +57,7 @@
 	}
 }
 
--(IBAction)newButton:(id)sender
+-(void)newButton:(id)sender
 {
 	[self.navigationController pushViewController:self.editView animated:YES];
 	
@@ -62,26 +65,27 @@
 	//[self displayEditToolbar];
 }
 
--(IBAction)editButton:(id)sender
+-(void)editButton:(id)sender
 {
 	[self.listView toggleButtons];
 	
 	//[self.listView viewDidLoad];
 }
 
--(IBAction)trushButton:(id)sender
+-(void)trushButton:(id)sender
 {
 	
 }
 
--(IBAction)cancelButton:(id)sender
+-(void)cancelButton:(id)sender
 {
 	[self switchViews];
 	[self displayListToolbar];
 }
 
--(IBAction)doneButton:(id)sender
+-(void)saveNewButton:(id)sender
 {
+	printf("Done called");
 	// new model, and refresh buttons on listview
 	
 	CustomButton * buttonModel = [[CustomButton alloc] init];
@@ -91,9 +95,9 @@
 	// loop through array and make a new array with strings that gets assigned to model
 	NSMutableArray * shortcuts = [[NSMutableArray alloc] init];
 	
-	for(int i = 0; i < [[[editView shortcutField] cellViews] count]; i++) 
+	for(int i = 0; i < [[[editView.shortcutView shortcutField] cellViews] count]; i++) 
 	{
-		TTPickerViewCell * cell = [[[editView shortcutField] cellViews] objectAtIndex:i];
+		TTPickerViewCell * cell = [[[editView.shortcutView shortcutField] cellViews] objectAtIndex:i];
 		
 		[shortcuts addObject: [cell label]];
 	}

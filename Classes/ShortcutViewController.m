@@ -21,7 +21,9 @@
 
 - (void)viewDidLoad
 {
-	shortcutField = [[[TTPickerTextField alloc] initWithFrame:CGRectMake(20, 40, 280, 42)] autorelease];
+	[self.view setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+	
+	shortcutField = [[[TTPickerTextField alloc] initWithFrame:CGRectMake(20, 10, 280, 42)] autorelease];
     shortcutField.dataSource = [[[PickerDataSource alloc] init] autorelease];;
     shortcutField.autocorrectionType = UITextAutocorrectionTypeNo;
     shortcutField.autocapitalizationType = UITextAutocapitalizationTypeNone;

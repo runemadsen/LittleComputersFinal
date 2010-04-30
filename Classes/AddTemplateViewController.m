@@ -18,6 +18,8 @@
 	[dc postNotification:[NSNotification notificationWithName:@"SaveNewTemplate" object:self]];
 	
     [self dismissModalViewControllerAnimated:YES];
+	
+	[templateName becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning 

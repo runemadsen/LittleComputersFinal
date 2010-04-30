@@ -123,8 +123,6 @@
 
 - (void)send:(uint32_t)type with:(int32_t)value time:(NSTimeInterval)timestamp 
 {
-	NSLog(@"Send method called");
-	
 	uint32_t tv_sec = (uint32_t)timestamp;
 	MouseEvent event = {htonl(type), htonl(value), htonl(tv_sec), htonl((long)((timestamp-tv_sec)*1.0E9))};
 

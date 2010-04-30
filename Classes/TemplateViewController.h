@@ -28,11 +28,11 @@
 
 - (id) initWithTemplate:(Template *)newModel;
 -(void)switchViews;
--(IBAction)newButton:(id)sender;
--(IBAction)editButton:(id)sender;
--(IBAction)trushButton:(id)sender;
--(IBAction)cancelButton:(id)sender;
--(IBAction)doneButton:(id)sender;
+-(void)newButton:(id)sender;
+-(void)editButton:(id)sender;
+-(void)trushButton:(id)sender;
+-(void)cancelButton:(id)sender;
+-(void)doneButton:(id)sender;
 -(void)displayListToolbar;
 -(void)displayEditToolbar;
 

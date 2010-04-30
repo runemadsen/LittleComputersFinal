@@ -7,6 +7,33 @@
 
 - (void) viewDidLoad
 {
+	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+																				   target:self
+																				   action:@selector(cancelButton:)];
+	
+	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+																				 target:self
+																				 action:@selector(doneButton:)];
+	
+	NSArray * items = [NSArray arrayWithObjects: cancelButton, doneButton, nil];	
+	
+	UIToolbar * tools =[UIToolbarExtend new];
+	
+	tools.frame = CGRectMake(0, 0, 133, 44.01);
+	[tools setItems:items animated:NO];
+	
+	//[tools setBarStyle:UIBarStyleBlackTranslucent];
+	[tools setTranslucent:YES];
+	
+	// these should change the button colors but they dont
+	tools.tintColor = [UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
+	
+	[cancelButton release];
+	[doneButton release];	
+	
+	
 	self.shortcutView = [[ShortcutViewController alloc] init];
 	
 	[self.view setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
@@ -29,6 +56,19 @@
 	[self.view addSubview:btn];
 	
 	[firstTextField becomeFirstResponder];
+}
+
+-(void)doneButton:(id)sender
+{
+	NSNotificationCenter * dc = [NSNotificationCenter defaultCenter];
+	[dc postNotification:[NSNotification notificationWithName:@"SaveNewButton" object:self]];
+	
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)cancelButton:(id)sender
+{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField 
