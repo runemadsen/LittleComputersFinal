@@ -98,8 +98,8 @@
 			}
 			else if([str isEqualToString:@"Mouse Left"])	
 			{
-				[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(1, 1) time:timestamp];
-				[appc send:EVENT_MOUSE_UP with:MouseEventValue(1, 1) time:timestamp];
+				[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(0, 1) time:timestamp];
+				[appc send:EVENT_MOUSE_UP with:MouseEventValue(0, 1) time:timestamp];
 			}
 			else if([str isEqualToString:@"Mouse Middle"])	
 			{
@@ -108,13 +108,11 @@
 			}
 			else if([str isEqualToString:@"Mouse Right"])	
 			{
-				[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(3, 1) time:timestamp];
-				[appc send:EVENT_MOUSE_UP with:MouseEventValue(3, 1) time:timestamp];
+				[appc send:EVENT_MOUSE_DOWN with:MouseEventValue(1, 1) time:timestamp];
+				[appc send:EVENT_MOUSE_UP with:MouseEventValue(1, 1) time:timestamp];
 			}
 			
 			[str release];
-			
-			NSLog(@"Send message: %@ \n", [btn.model.shortcuts objectAtIndex:i]);
 		}
 	}
 }
