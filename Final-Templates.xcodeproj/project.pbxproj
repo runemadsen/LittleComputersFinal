@@ -23,6 +23,7 @@
 		A54CDAF41187D3650083822E /* ButtonStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CDAF31187D3650083822E /* ButtonStylesheet.m */; };
 		A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A55B3F43116E3E1700C28475 /* TemplatesLoader.m */; };
 		A55E77D81188B98000711D73 /* TTButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E77D71188B98000711D73 /* TTButtonModel.m */; };
+		A572C559118B25DE00A0A0AA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A572C558118B25DE00A0A0AA /* icon.png */; };
 		A57FD303116D4CD90078207A /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD302116D4CD90078207A /* Template.m */; };
 		A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD30D116D506B0078207A /* TemplateViewController.m */; };
 		A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D18347116E534A00E2122C /* LCFileHelpers.m */; };
@@ -74,7 +75,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Final_TemplatesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Final_TemplatesAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Final_TemplatesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Final_TemplatesAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Final-Templates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final-Templates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* TapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* Final_Templates_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Final_Templates_Prefix.pch; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		A55B3F43116E3E1700C28475 /* TemplatesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesLoader.m; sourceTree = "<group>"; };
 		A55E77D61188B98000711D73 /* TTButtonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTButtonModel.h; sourceTree = "<group>"; };
 		A55E77D71188B98000711D73 /* TTButtonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTButtonModel.m; sourceTree = "<group>"; };
+		A572C558118B25DE00A0A0AA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = "<group>"; };
 		A57FD301116D4CD90078207A /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
 		A57FD302116D4CD90078207A /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
 		A57FD30C116D506B0078207A /* TemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateViewController.h; sourceTree = "<group>"; };
@@ -176,7 +178,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Final-Templates.app */,
+				1D6058910D05DD3D006BFB54 /* TapApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +245,7 @@
 		A54CD8EA1187AAC60083822E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A572C558118B25DE00A0A0AA /* icon.png */,
 				A54CD9EA1187C0470083822E /* savebutton.png */,
 				A54CD9C81187BC810083822E /* textfield.png */,
 				A54CD8EF1187AB650083822E /* topbar.png */,
@@ -347,7 +350,7 @@
 			);
 			name = "Final-Templates";
 			productName = "Final-Templates";
-			productReference = 1D6058910D05DD3D006BFB54 /* Final-Templates.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* TapApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -409,6 +412,7 @@
 				A54CD9C91187BC810083822E /* textfield.png in Resources */,
 				A54CD9EB1187C0470083822E /* savebutton.png in Resources */,
 				A527816F1188DA6E00F4BEFB /* AddTemplateViewController.xib in Resources */,
+				A572C559118B25DE00A0A0AA /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +472,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Final_Templates_Prefix.pch;
 				INFOPLIST_FILE = "Final_Templates-Info.plist";
-				PRODUCT_NAME = "Final-Templates";
+				PRODUCT_NAME = TapApp;
 			};
 			name = Debug;
 		};
