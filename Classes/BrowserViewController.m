@@ -58,6 +58,10 @@
 
 		self.searchingForServicesString = @"Searching for servers...";
 		bonjourIcon = [[UIImage imageNamed:@"Bonjour.png"] retain];
+		
+		// Style background
+		[self.tableView setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+		self.tableView.separatorColor = [UIColor colorWithWhite:.12 alpha:1];
 
 		// Make sure we have a chance to discover devices before showing the user that nothing was found (yet)
 		[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(initialWaitOver:) userInfo:nil repeats:NO];
@@ -184,7 +188,9 @@
 	// Set up the text for the cell
 	NSNetService* service = [self.services objectAtIndex:indexPath.row];
 	cell.text = [service name];
-	cell.textColor = [UIColor blackColor];
+	[cell setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+	cell.textLabel.textColor = [UIColor colorWithWhite:.85 alpha:1];
+	//cell.textColor = [UIColor blackColor];
 	cell.accessoryType = self.showDisclosureIndicators ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 	
 	// Note that the underlying array could have changed, and we want to show the activity indicator on the correct cell

@@ -73,76 +73,31 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 - (id)initWithFrame:(CGRect)frame type:(NSString*)type 
 {
-	if ((self = [super initWithFrame:frame])) {
+	if ((self = [super initWithFrame:frame])) 
+	{
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		if (![defaults stringForKey:kDefaultKeyServerName]) {
+		
+		if (![defaults stringForKey:kDefaultKeyServerName]) 
+		{
 			[defaults registerDefaults:[NSDictionary dictionaryWithObject:kDefaultServerName forKey:kDefaultKeyServerName]];
 		}
-		if ([defaults boolForKey:kDefaultKeyProhibitSleeping]) {
+		
+		if ([defaults boolForKey:kDefaultKeyProhibitSleeping]) 
+		{
 			[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 		}
+		
 		CGFloat runningY = kStatusBarHeight;
 		self.bvc = [[BrowserViewController alloc] initWithTitle:nil showDisclosureIndicators:NO showCancelButton:NO];
 		[self.bvc searchForServicesOfType:type inDomain:@"local"];
 		
 		self.opaque = YES;
-		self.backgroundColor = [UIColor blackColor];
-		
-		UIImageView* img = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] stretchableImageWithLeftCapWidth:1.0 topCapHeight:25.0]];
-		[self addSubview:img];
-		
-		runningY += kOffset;
+		self.backgroundColor = [UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1];
+
 		CGFloat width = self.bounds.size.width - 2 * kOffset;
 		
-		UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
-		[label setTextAlignment:UITextAlignmentCenter];
-		[label setFont:[UIFont boldSystemFontOfSize:15.0]];
-		[label setTextColor:[UIColor whiteColor]];
-		[label setShadowColor:[UIColor colorWithWhite:0.0 alpha:0.75]];
-		[label setShadowOffset:CGSizeMake(1,1)];
-		[label setBackgroundColor:[UIColor clearColor]];
-		label.text = @"My name:";
-		label.numberOfLines = 1;
-		[label sizeToFit];
-		label.frame = CGRectMake(kOffset, runningY, width, label.frame.size.height);
-		[self addSubview:label];
-		
-		runningY += label.bounds.size.height;
-		[label release];
-
-		self.gameNameLabel = [UIButton buttonWithType:UIButtonTypeCustom];
-		[self.gameNameLabel setFont:[UIFont boldSystemFontOfSize:24.0]];
-		[self.gameNameLabel setLineBreakMode:UILineBreakModeTailTruncation];
-		[self.gameNameLabel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[self.gameNameLabel setTitleShadowColor:[UIColor colorWithWhite:0.0 alpha:0.75] forState:UIControlStateNormal];
-		[self.gameNameLabel setTitleShadowOffset:CGSizeMake(1,1)];
-		[self.gameNameLabel setTitle:@"Default Name" forState:UIControlStateNormal];
-		[self.gameNameLabel sizeToFit];
-		[self.gameNameLabel setFrame:CGRectMake(kOffset, runningY, width, self.gameNameLabel.frame.size.height)];
-		[self.gameNameLabel setTitle:@"" forState:UIControlStateNormal];
-		[self.gameNameLabel addTarget:self action:@selector(startDemoModeWithDelay) forControlEvents:UIControlEventTouchDown];
-		[self.gameNameLabel addTarget:self action:@selector(cancelDemoMode) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchCancel|UIControlEventTouchDragExit];
-		[self addSubview:self.gameNameLabel];
-		
-		runningY += self.gameNameLabel.bounds.size.height + kOffset * 2;
-		
-		label = [[UILabel alloc] initWithFrame:CGRectZero];
-		messageLabel = [label retain];
-		[label setTextAlignment:UITextAlignmentCenter];
-		[label setFont:[UIFont boldSystemFontOfSize:15.0]];
-		[label setTextColor:[UIColor whiteColor]];
-		[label setShadowColor:[UIColor colorWithWhite:0.0 alpha:0.75]];
-		[label setShadowOffset:CGSizeMake(1,1)];
-		[label setBackgroundColor:[UIColor clearColor]];
-		[self setMessage:@""];
-		[label sizeToFit];
-		label.frame = CGRectMake(kOffset, runningY, width, label.frame.size.height);
-		[self addSubview:label];
-		
-		runningY += label.bounds.size.height + 2;
-		[label release];
-		
-		UITextField *serverName = [[UITextField alloc] initWithFrame:CGRectZero];
+		UITextField * serverName = [[UITextField alloc] initWithFrame:CGRectZero];
+		serverName.background = [UIImage imageNamed:@"textfield.png"];
 		[serverName setDelegate:self];
 		[serverName setAutocorrectionType:UITextAutocorrectionTypeNo];
 		[serverName setClearButtonMode:UITextFieldViewModeWhileEditing];
@@ -151,7 +106,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		[serverName setReturnKeyType:UIReturnKeyGo];
 		[serverName setTextAlignment:UITextAlignmentCenter];
 		[serverName setFont:[UIFont boldSystemFontOfSize:24.0]];
-		[serverName setBorderStyle:UITextBorderStyleRoundedRect];
+		serverName.textColor = [UIColor colorWithWhite:0.56 alpha:1];
 		[serverName setPlaceholder:@"<IP or Hostname>"];
 		[serverName setText:[defaults stringForKey:kDefaultKeyServerName]];
 		[serverName sizeToFit];
@@ -161,14 +116,14 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		runningY += serverName.bounds.size.height + kOffset * 2;
 		[serverName release];
 		
+		UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
 		label = [[UILabel alloc] initWithFrame:CGRectZero];
 		[label setTextAlignment:UITextAlignmentCenter];
 		[label setFont:[UIFont boldSystemFontOfSize:15.0]];
-		[label setTextColor:[UIColor whiteColor]];
-		[label setShadowColor:[UIColor colorWithWhite:0.0 alpha:0.75]];
-		[label setShadowOffset:CGSizeMake(1,1)];
+		[label setTextColor:[UIColor colorWithWhite:0.56 alpha:1]];
+		//[label setShadowOffset:CGSizeMake(1,1)];
 		[label setBackgroundColor:[UIColor clearColor]];
-		label.text = @"Or, select RemotePad servers:";
+		label.text = @"Or Select Computer:";
 		[label sizeToFit];
 		label.frame = CGRectMake(kOffset, runningY, width, label.frame.size.height);
 		[self addSubview:label];
@@ -176,8 +131,8 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		runningY += label.bounds.size.height + 2;
 		[label release];
 		
-		[img setFrame:CGRectMake(0, kStatusBarHeight, self.bounds.size.width, runningY)];
-		[img release];
+		//[img setFrame:CGRectMake(0, kStatusBarHeight, self.bounds.size.width, runningY)];
+		//[img release];
 		
 		[self.bvc.view setFrame:CGRectMake(0, runningY, self.bounds.size.width, self.bounds.size.height - runningY)];
 		[self addSubview:self.bvc.view];
